@@ -1,0 +1,5 @@
+const mainController = (req, res) => {
+    res.send("Hello");
+};
+
+module.exports = mainController;
