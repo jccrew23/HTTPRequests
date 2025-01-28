@@ -7,6 +7,7 @@ const port = 8080
 
 app 
     .use(bodyParser.json())
+    .use(express.json())
     .use((req, res, next) => {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
@@ -14,6 +15,7 @@ app
         next();
     })
     .use('/', require('./routes/contacts'));
+    
 
 mongodb.initDb((err, mongodb) => {
     if (err) {

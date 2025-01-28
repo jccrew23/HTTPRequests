@@ -22,4 +22,16 @@ const getSingle = async (req, res, next) => {
     });
   };
 
-module.exports = { getAll, getSingle };
+const createOne = async (req, res) => {
+    const {firstName, lastName, email, favoriteColor, birthday } = req.body;
+    const newContact = { firstName, lastName, email, favoriteColor, birthday };
+    const db = mongodb.getDb();
+    const response = await db.collection('Contacts').insertOne(newContact);
+    if (response.acknowledged) {
+        res.status(201).json(newContact);
+    } else {
+        res.status(500).json({ error: 'An error occurred' });
+    }
+};
+
+module.exports = { getAll, getSingle, createOne };
