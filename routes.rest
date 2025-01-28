@@ -19,6 +19,22 @@ Content-Type: application/json
     "birthday": "1976-03-23"
 }
 
+### Update contact by id
+PUT http://localhost:8080/67956a3a38bf56be9946930e
+Content-Type: application/json
+
+{
+    "id": "67956a3a38bf56be9946930e",
+    "firstName": "Carey",
+    "lastName": "Curtis",
+    "email": "ben@tidyinc.com",
+    "favoriteColor": "black",
+    "birthday": "1952-02-19"
+}
+
+### Delete contact by id
+DELETE http://localhost:8080/67985fed642ac6bb8b50a7d3
+
 // PRODUCTION Deploy
 ### Get contact by id
 GET https://httprequests.onrender.com/67956a3a38bf56be9946930e
@@ -33,9 +49,25 @@ POST https://httprequests.onrender.com/
 Content-Type: application/json
 
 {
-    "firstName": "Eric",
-    "lastName": "Powell",
-    "email": "epcoolio@yahoo.com",
-    "favoriteColor": "green",
-    "birthday": "1973-04-24"
+    "firstName": "Josh",
+    "lastName": "Ritter",
+    "email": "jrawesome@yahoo.com",
+    "favoriteColor": "pink",
+    "birthday": "1974-05-29"
 }
+
+### Update contact by id
+PUT https://httprequests.onrender.com/67956a3a38bf56be9946930e
+Content-Type: application/json
+
+{
+    "id": "67956a6538bf56be99469312",
+    "firstName": "Benson",
+    "lastName": "Cartis",
+    "email": "bcartis@gmail.com",
+    "favoriteColor": "magenta",
+    "birthday": "1982-08-12"
+}
+
+### Delete contact by id
+DELETE https://httprequests.onrender.com/6798dd1cf488d41915315fab

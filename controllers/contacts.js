@@ -34,4 +34,31 @@ const createOne = async (req, res) => {
     }
 };
 
-module.exports = { getAll, getSingle, createOne };
+const updateOne = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const { firstName, lastName, email, favoriteColor, birthday } = req.body;
+    const updatedContact = { firstName, lastName, email, favoriteColor, birthday };
+
+    const db = mongodb.getDb();
+    const response = await db.collection('Contacts').updateOne({ _id: userId }, { $set: updatedContact });
+    if (response.acknowledged) {
+        res.status(200).json(updatedContact);
+    } else {
+        res.status(500).json({ error: 'An error occurred' });
+    }
+};
+
+const deleteOne = async (req, res) => {
+    const userId = new ObjectId(req.params.id);
+    const db = mongodb.getDb();
+    const response = await db.collection('Contacts').deleteOne({ _id: userId });
+    if (response.acknowledged) {
+        res.status(204).send();
+    } else {
+        res.status(500).json({ error: 'An error occurred' });
+    }
+}
+
+
+
+module.exports = { getAll, getSingle, createOne, updateOne, deleteOne };
