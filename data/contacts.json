@@ -1,0 +1,25 @@
+{
+    "contacts": [
+        {
+            "firstName" : "Ben",
+             "lastName" : "Curtis", 
+             "email": "bcurtis@gmail.com", 
+             "favoriteColor" : "black", 
+             "birthday" : "1994-02-19"
+        },
+        {
+            "firstName" : "Jonas",
+             "lastName" : "Curtis", 
+             "email": "jcurtis@gmail.com", 
+             "favoriteColor" : "blue", 
+             "birthday" : "2019-07-17"
+        },
+        {
+            "firstName" : "August",
+             "lastName" : "Curtis", 
+             "email": "acurtis@gmail.com", 
+             "favoriteColor" : "green", 
+             "birthday" : "2023-08-10"
+        }
+    ]
+}

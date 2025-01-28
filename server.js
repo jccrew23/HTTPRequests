@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const mongodb = require('./mongodb/connect');
 
-const port = 3000
+const port = 8080
 
 app 
     .use(bodyParser.json())
@@ -23,10 +23,4 @@ mongodb.initDb((err, mongodb) => {
             console.log('Web Server is listening on port ' + port);
             })
         }
-    });
-
-    process.on('SIGINT', () => {
-        mongodb.closeDb(); // Close MongoDB connection
-        console.log('Server is shutting down...');
-        process.exit(0);
     });
