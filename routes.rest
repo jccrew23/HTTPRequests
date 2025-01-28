@@ -49,11 +49,11 @@ POST https://httprequests.onrender.com/
 Content-Type: application/json
 
 {
-    "firstName": "Josh",
-    "lastName": "Ritter",
-    "email": "jrawesome@yahoo.com",
-    "favoriteColor": "pink",
-    "birthday": "1974-05-29"
+    "firstName": "Josue",
+    "lastName": "Fairwell",
+    "email": "jhdawg@yahoo.com",
+    "favoriteColor": "green",
+    "birthday": "1990-07-12"
 }
 
 ### Update contact by id
@@ -62,12 +62,12 @@ Content-Type: application/json
 
 {
     "id": "67956a6538bf56be99469312",
-    "firstName": "Benson",
-    "lastName": "Cartis",
-    "email": "bcartis@gmail.com",
-    "favoriteColor": "magenta",
-    "birthday": "1982-08-12"
+    "firstName": "August",
+    "lastName": "Hanson",
+    "email": "ah@gmail.com",
+    "favoriteColor": "periwinkle",
+    "birthday": "1994-04-25"
 }
 
 ### Delete contact by id
-DELETE https://httprequests.onrender.com/6798dd1cf488d41915315fab
+DELETE https://httprequests.onrender.com/67956a3a38bf56be9946930e
