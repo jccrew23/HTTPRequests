@@ -1,4 +1,5 @@
 
+const { BSON } = require('mongodb');
 const mongodb = require('../mongodb/connect');
 const { ObjectId } = require('mongodb');
 
@@ -12,15 +13,26 @@ const getAll = async (req, res) => {
     });
 };
 
+
 const getSingle = async (req, res, next) => {
-    const userId = new ObjectId(req.params.id);
+    let id = req.params.id;
+    id = `${id}`;
+    console.log(id);
+    const userId = new ObjectId(id);
+    
+    console.log(userId);
     const db = mongodb.getDb();
     const result = await db.collection('Contacts').find({ _id: userId });
     result.toArray().then((lists) => {
       res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists[0]);
+      res.status(200).send(lists[0]);
     });
-  };
+
+    if (!result) {
+        res.status(404).json({ error: 'Contact not found' });
+    };
+
+};
 
 const createOne = async (req, res) => {
     const {firstName, lastName, email, favoriteColor, birthday } = req.body;
