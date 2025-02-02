@@ -12,11 +12,11 @@ POST http://localhost:8080/
 Content-Type: application/json
 
 {
-    "firstName": "Mindy",
-    "lastName": "Powell",
-    "email": "mspejp@yahoo.com",
-    "favoriteColor": "white",
-    "birthday": "1976-03-23"
+    "firstName": "Lola",
+    "lastName": "Greebley",
+    "email": "lgreeb@yahoo.com",
+    "favoriteColor": "brown",
+    "birthday": "1975-02-20"
 }
 
 ### Update contact by id
@@ -25,11 +25,11 @@ Content-Type: application/json
 
 {
     "id": "67956a3a38bf56be9946930e",
-    "firstName": "Carey",
-    "lastName": "Curtis",
-    "email": "ben@tidyinc.com",
-    "favoriteColor": "black",
-    "birthday": "1952-02-19"
+    "firstName": "Craig",
+    "lastName": "Curtland",
+    "email": "ccland@tidyinc.com",
+    "favoriteColor": "perriwinkle",
+    "birthday": "1999-04-09"
 }
 
 ### Delete contact by id
@@ -49,11 +49,11 @@ POST https://httprequests.onrender.com/
 Content-Type: application/json
 
 {
-    "firstName": "Josue",
-    "lastName": "Fairwell",
-    "email": "jhdawg@yahoo.com",
-    "favoriteColor": "green",
-    "birthday": "1990-07-12"
+    "firstName": "Lola",
+    "lastName": "Greebley",
+    "email": "lgreeb@yahoo.com",
+    "favoriteColor": "brown",
+    "birthday": "1975-02-20"
 }
 
 ### Update contact by id
@@ -61,12 +61,12 @@ PUT https://httprequests.onrender.com/67956a3a38bf56be9946930e
 Content-Type: application/json
 
 {
-    "id": "67956a6538bf56be99469312",
-    "firstName": "August",
-    "lastName": "Hanson",
-    "email": "ah@gmail.com",
-    "favoriteColor": "periwinkle",
-    "birthday": "1994-04-25"
+    "id": "67956a3a38bf56be9946930e",
+    "firstName": "Craig",
+    "lastName": "Curtland",
+    "email": "ccland@tidyinc.com",
+    "favoriteColor": "perriwinkle",
+    "birthday": "1999-04-09"
 }
 
 ### Delete contact by id
